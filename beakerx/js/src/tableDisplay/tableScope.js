@@ -1549,7 +1549,7 @@ define([
         var container = el.closest('.bko-header-menu');
         var colIdx = container.data('columnIndex');
 
-        if (_.contains(['asc', 'desc'], direction)) {
+        if (_.includes(['asc', 'desc'], direction)) {
           self.table.order([colIdx, direction]).draw();
         }
       },
@@ -1562,7 +1562,7 @@ define([
           return false;
         }
 
-        if (_.contains(['asc', 'desc'], direction)) {
+        if (_.includes(['asc', 'desc'], direction)) {
           return (order[0][0] == colIdx && order[0][1] == direction);
         } else {
           return (order[0][0] !== colIdx);
